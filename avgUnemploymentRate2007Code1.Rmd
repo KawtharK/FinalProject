@@ -1,0 +1,66 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(tidyverse)
+```
+
+
+```{r}
+code1 <-job_data %>%
+				filter(Rural_urban_continuum_code_2013==1)
+
+avgUnemploymentRate2007Code1<-mean(code1$Unemployment_rate_2007)
+avgUnemploymentRate2008Code1<-mean(code1$Unemployment_rate_2008)
+avgUnemploymentRate2009Code1<-mean(code1$Unemployment_rate_2009)
+avgUnemploymentRate2010Code1<-mean(code1$Unemployment_rate_2010)
+avgUnemploymentRate2011Code1<-mean(code1$Unemployment_rate_2011)
+avgUnemploymentRate2012Code1<-mean(code1$Unemployment_rate_2012)
+avgUnemploymentRate2013Code1<-mean(code1$Unemployment_rate_2013)
+avgUnemploymentRate2014Code1<-mean(code1$Unemployment_rate_2014)
+avgUnemploymentRate2015Code1<-mean(code1$Unemployment_rate_2015)
+avgUnemploymentRate2016Code1<-mean(code1$Unemployment_rate_2016)
+avgUnemploymentRate2017Code1<-mean(code1$Unemployment_rate_2017)
+
+class(avgUnemploymentRate2007Code1)
+
+code1_county_avg_unemployment_rate_by_year <-data.frame("Avg_for_counties_in_code1_2007"=c(avgUnemploymentRate2007Code1), "Avg_for_counties_in_code1_2008"=c(avgUnemploymentRate2008Code1), "Avg_for_counties_in_code1_2009"=c(avgUnemploymentRate2009Code1), "Avg_for_counties_in_code1_2010"=c(avgUnemploymentRate2010Code1), "Avg_for_counties_in_code1_2011"=c(avgUnemploymentRate2011Code1), "Avg_for_counties_in_code1_2012"=c(avgUnemploymentRate2012Code1), "Avg_for_counties_in_code1_2013"=c(avgUnemploymentRate2013Code1), "Avg_for_counties_in_code1_2014"=c(avgUnemploymentRate2014Code1), "Avg_for_counties_in_code1_2015"=c(avgUnemploymentRate2015Code1), "Avg_for_counties_in_code1_2016"=c(avgUnemploymentRate2016Code1), "Avg_for_counties_in_code1_2017"=c(avgUnemploymentRate2017Code1))
+
+print(code1_county_avg_unemployment_rate_by_year)
+
+
+
+#code2 <-job_data %>%
+#				filter(Rural_urban_continuum_code_2013==2)
+#code3 <-job_data %>%
+#				filter(Rural_urban_continuum_code_2013==3)
+#code4 <-job_data %>%
+#				filter(Rural_urban_continuum_code_2013==4)
+#code5 <-job_data %>%
+#				filter(Rural_urban_continuum_code_2013==5)
+#code6 <-job_data %>%
+#				filter(Rural_urban_continuum_code_2013==6)
+#code7 <-job_data %>%
+#				filter(Rural_urban_continuum_code_2013==7)
+#code8 <-job_data %>%
+#				filter(Rural_urban_continuum_code_2013==8)
+#code9 <-job_data %>% 
+#				filter(Rural_urban_continuum_code_2013==9)
+
+
+
+```
+
+```{r}
+
+
+```
+
+```{r}
+
+
+```
