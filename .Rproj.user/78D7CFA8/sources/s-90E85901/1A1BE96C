@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1543114178721.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "522059414",
+    "id" : "1A1BE96C",
+    "lastKnownWriteTime" : 1543116121,
+    "last_content_update" : 1543116122002,
+    "path" : "~/Documents/GitHub/KFP/avgUnemploymentRate2007Code1.Rmd",
+    "project_path" : "avgUnemploymentRate2007Code1.Rmd",
+    "properties" : {
+        "cursorPosition" : "46,33",
+        "last_setup_crc32" : "90E85901713397e7",
+        "scrollLine" : "40"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
