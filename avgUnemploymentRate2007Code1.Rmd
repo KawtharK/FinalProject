@@ -12,6 +12,8 @@ library(tidyverse)
 
 ```{r}
 job_data = Unemployment_edited
+
+#CODE 1
 code1 <-job_data %>%
 				filter(Rural_urban_continuum_code_2013==1)
 
@@ -27,14 +29,13 @@ avgUnemploymentRate2015Code1<-mean(code1$Unemployment_rate_2015)
 avgUnemploymentRate2016Code1<-mean(code1$Unemployment_rate_2016)
 avgUnemploymentRate2017Code1<-mean(code1$Unemployment_rate_2017)
 
-#class(avgUnemploymentRate2007Code1)
-#new data frame of all the years for all the code1 counties
-code1_county_avg_unemployment_rate_by_year <-data.frame("Avg_for_counties_in_code1_2007"=c(avgUnemploymentRate2007Code1), "Avg_for_counties_in_code1_2008"=c(avgUnemploymentRate2008Code1), "Avg_for_counties_in_code1_2009"=c(avgUnemploymentRate2009Code1), "Avg_for_counties_in_code1_2010"=c(avgUnemploymentRate2010Code1), "Avg_for_counties_in_code1_2011"=c(avgUnemploymentRate2011Code1), "Avg_for_counties_in_code1_2012"=c(avgUnemploymentRate2012Code1), "Avg_for_counties_in_code1_2013"=c(avgUnemploymentRate2013Code1), "Avg_for_counties_in_code1_2014"=c(avgUnemploymentRate2014Code1), "Avg_for_counties_in_code1_2015"=c(avgUnemploymentRate2015Code1), "Avg_for_counties_in_code1_2016"=c(avgUnemploymentRate2016Code1), "Avg_for_counties_in_code1_2017"=c(avgUnemploymentRate2017Code1))
+code1_county_avg_unemployment_rate_by_year <-data.frame(
+"Avg_for_counties_in_code1_2007"=c(avgUnemploymentRate2007Code1), "Avg_for_counties_in_code1_2008"=c(avgUnemploymentRate2008Code1), "Avg_for_counties_in_code1_2009"=c(avgUnemploymentRate2009Code1), "Avg_for_counties_in_code1_2010"=c(avgUnemploymentRate2010Code1), "Avg_for_counties_in_code1_2011"=c(avgUnemploymentRate2011Code1), "Avg_for_counties_in_code1_2012"=c(avgUnemploymentRate2012Code1), "Avg_for_counties_in_code1_2013"=c(avgUnemploymentRate2013Code1), "Avg_for_counties_in_code1_2014"=c(avgUnemploymentRate2014Code1), "Avg_for_counties_in_code1_2015"=c(avgUnemploymentRate2015Code1), "Avg_for_counties_in_code1_2016"=c(avgUnemploymentRate2016Code1), "Avg_for_counties_in_code1_2017"=c(avgUnemploymentRate2017Code1))
 
 x<-c(2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017)
-#length(x)
+length(x)
 
-y<-c(code1_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code1_2007,
+y1<-c(code1_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code1_2007,
 		 code1_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code1_2008,
 		 code1_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code1_2009,
 		 code1_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code1_2010,
@@ -46,32 +47,282 @@ y<-c(code1_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code1_2007,
 		 code1_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code1_2016,
 		 code1_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code1_2017)
 
-plot(x, y, xlim=c(2007, 2017), ylim=c(0, 10))
-#print(code1_county_avg_unemployment_rate_by_year)
-
-#coord1 = xy.coords(x=2007, y=code1_county_avg_unemployment_rate_by_year&avgUnemploymentRate2007Code1)
-#print(coord1)
-#ggplot(code1_county_avg_unemployment_rate_by_year, aes(x=seq(2007, 2017), y=value)) + geom_line()
+plot(x, y1, xlim=c(2007, 2017), ylim=c(0, 20))
 
 
-#code2 <-job_data %>%
-#				filter(Rural_urban_continuum_code_2013==2)
-#code3 <-job_data %>%
-#				filter(Rural_urban_continuum_code_2013==3)
-#code4 <-job_data %>%
-#				filter(Rural_urban_continuum_code_2013==4)
-#code5 <-job_data %>%
-#				filter(Rural_urban_continuum_code_2013==5)
-#code6 <-job_data %>%
-#				filter(Rural_urban_continuum_code_2013==6)
-#code7 <-job_data %>%
-#				filter(Rural_urban_continuum_code_2013==7)
-#code8 <-job_data %>%
-#				filter(Rural_urban_continuum_code_2013==8)
-#code9 <-job_data %>% 
-#				filter(Rural_urban_continuum_code_2013==9)
+#CODE 2
+code2 <-job_data %>%
+				filter(Rural_urban_continuum_code_2013==2)
+
+avgUnemploymentRate2007Code2<-mean(code2$Unemployment_rate_2007)
+avgUnemploymentRate2008Code2<-mean(code2$Unemployment_rate_2008)
+avgUnemploymentRate2009Code2<-mean(code2$Unemployment_rate_2009)
+avgUnemploymentRate2010Code2<-mean(code2$Unemployment_rate_2010)
+avgUnemploymentRate2011Code2<-mean(code2$Unemployment_rate_2011)
+avgUnemploymentRate2012Code2<-mean(code2$Unemployment_rate_2012)
+avgUnemploymentRate2013Code2<-mean(code2$Unemployment_rate_2013)
+avgUnemploymentRate2014Code2<-mean(code2$Unemployment_rate_2014)
+avgUnemploymentRate2015Code2<-mean(code2$Unemployment_rate_2015)
+avgUnemploymentRate2016Code2<-mean(code2$Unemployment_rate_2016)
+avgUnemploymentRate2017Code2<-mean(code2$Unemployment_rate_2017)
+
+code2_county_avg_unemployment_rate_by_year <-data.frame(
+"Avg_for_counties_in_code2_2007"=c(avgUnemploymentRate2007Code2), "Avg_for_counties_in_code2_2008"=c(avgUnemploymentRate2008Code2), "Avg_for_counties_in_code2_2009"=c(avgUnemploymentRate2009Code2), "Avg_for_counties_in_code2_2010"=c(avgUnemploymentRate2010Code2), "Avg_for_counties_in_code2_2011"=c(avgUnemploymentRate2011Code2), "Avg_for_counties_in_code2_2012"=c(avgUnemploymentRate2012Code2), "Avg_for_counties_in_code2_2013"=c(avgUnemploymentRate2013Code2), "Avg_for_counties_in_code2_2014"=c(avgUnemploymentRate2014Code2), "Avg_for_counties_in_code2_2015"=c(avgUnemploymentRate2015Code2), "Avg_for_counties_in_code2_2016"=c(avgUnemploymentRate2016Code2), "Avg_for_counties_in_code2_2017"=c(avgUnemploymentRate2017Code2))
 
 
+y2<-c(code2_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code2_2007,
+		 code2_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code2_2008,
+		 code2_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code2_2009,
+		 code2_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code2_2010,
+		 code2_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code2_2011,
+		 code2_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code2_2012,
+		 code2_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code2_2013,
+		 code2_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code2_2014,
+		 code2_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code2_2015,
+		 code2_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code2_2016,
+		 code2_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code2_2017)
+
+plot(x, y2, xlim=c(2007, 2017), ylim=c(0, 20))
+
+
+
+#CODE 3
+code3 <-job_data %>%
+				filter(Rural_urban_continuum_code_2013==3)
+
+avgUnemploymentRate2007Code3<-mean(code3$Unemployment_rate_2007)
+avgUnemploymentRate2008Code3<-mean(code3$Unemployment_rate_2008)
+avgUnemploymentRate2009Code3<-mean(code3$Unemployment_rate_2009)
+avgUnemploymentRate2010Code3<-mean(code3$Unemployment_rate_2010)
+avgUnemploymentRate2011Code3<-mean(code3$Unemployment_rate_2011)
+avgUnemploymentRate2012Code3<-mean(code3$Unemployment_rate_2012)
+avgUnemploymentRate2013Code3<-mean(code3$Unemployment_rate_2013)
+avgUnemploymentRate2014Code3<-mean(code3$Unemployment_rate_2014)
+avgUnemploymentRate2015Code3<-mean(code3$Unemployment_rate_2015)
+avgUnemploymentRate2016Code3<-mean(code3$Unemployment_rate_2016)
+avgUnemploymentRate2017Code3<-mean(code3$Unemployment_rate_2017)
+
+code3_county_avg_unemployment_rate_by_year <-data.frame(
+"Avg_for_counties_in_code3_2007"=c(avgUnemploymentRate2007Code3), "Avg_for_counties_in_code3_2008"=c(avgUnemploymentRate2008Code3), "Avg_for_counties_in_code3_2009"=c(avgUnemploymentRate2009Code3), "Avg_for_counties_in_code3_2010"=c(avgUnemploymentRate2010Code3), "Avg_for_counties_in_code3_2011"=c(avgUnemploymentRate2011Code3), "Avg_for_counties_in_code3_2012"=c(avgUnemploymentRate2012Code3), "Avg_for_counties_in_code3_2013"=c(avgUnemploymentRate2013Code3), "Avg_for_counties_in_code3_2014"=c(avgUnemploymentRate2014Code3), "Avg_for_counties_in_code3_2015"=c(avgUnemploymentRate2015Code3), "Avg_for_counties_in_code3_2016"=c(avgUnemploymentRate2016Code3), "Avg_for_counties_in_code3_2017"=c(avgUnemploymentRate2017Code3))
+
+y3<-c(code3_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code3_2007,
+		 code3_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code3_2008,
+		 code3_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code3_2009,
+		 code3_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code3_2010,
+		 code3_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code3_2011,
+		 code3_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code3_2012,
+		 code3_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code3_2013,
+		 code3_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code3_2014,
+		 code3_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code3_2015,
+		 code3_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code3_2016,
+		 code3_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code3_2017)
+
+plot(x, y3, xlim=c(2007, 2017), ylim=c(0, 20))
+
+#CODE 4
+code4 <-job_data %>%
+				filter(Rural_urban_continuum_code_2013==4)
+
+avgUnemploymentRate2007Code4<-mean(code4$Unemployment_rate_2007)
+avgUnemploymentRate2008Code4<-mean(code4$Unemployment_rate_2008)
+avgUnemploymentRate2009Code4<-mean(code4$Unemployment_rate_2009)
+avgUnemploymentRate2010Code4<-mean(code4$Unemployment_rate_2010)
+avgUnemploymentRate2011Code4<-mean(code4$Unemployment_rate_2011)
+avgUnemploymentRate2012Code4<-mean(code4$Unemployment_rate_2012)
+avgUnemploymentRate2013Code4<-mean(code4$Unemployment_rate_2013)
+avgUnemploymentRate2014Code4<-mean(code4$Unemployment_rate_2014)
+avgUnemploymentRate2015Code4<-mean(code4$Unemployment_rate_2015)
+avgUnemploymentRate2016Code4<-mean(code4$Unemployment_rate_2016)
+avgUnemploymentRate2017Code4<-mean(code4$Unemployment_rate_2017)
+
+code4_county_avg_unemployment_rate_by_year <-data.frame(
+"Avg_for_counties_in_code4_2007"=c(avgUnemploymentRate2007Code4), "Avg_for_counties_in_code4_2008"=c(avgUnemploymentRate2008Code4), "Avg_for_counties_in_code4_2009"=c(avgUnemploymentRate2009Code4), "Avg_for_counties_in_code4_2010"=c(avgUnemploymentRate2010Code4), "Avg_for_counties_in_code4_2011"=c(avgUnemploymentRate2011Code4), "Avg_for_counties_in_code4_2012"=c(avgUnemploymentRate2012Code4), "Avg_for_counties_in_code4_2013"=c(avgUnemploymentRate2013Code4), "Avg_for_counties_in_code4_2014"=c(avgUnemploymentRate2014Code4), "Avg_for_counties_in_code4_2015"=c(avgUnemploymentRate2015Code4), "Avg_for_counties_in_code4_2016"=c(avgUnemploymentRate2016Code4), "Avg_for_counties_in_code4_2017"=c(avgUnemploymentRate2017Code4))
+
+y4<-c(code4_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code4_2007,
+		 code4_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code4_2008,
+		 code4_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code4_2009,
+		 code4_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code4_2010,
+		 code4_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code4_2011,
+		 code4_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code4_2012,
+		 code4_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code4_2013,
+		 code4_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code4_2014,
+		 code4_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code4_2015,
+		 code4_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code4_2016,
+		 code4_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code4_2017)
+
+plot(x, y4, xlim=c(2007, 2017), ylim=c(0, 20))
+
+
+#CODE 5
+code5 <-job_data %>%
+				filter(Rural_urban_continuum_code_2013==5)
+
+avgUnemploymentRate2007Code5<-mean(code5$Unemployment_rate_2007)
+avgUnemploymentRate2008Code5<-mean(code5$Unemployment_rate_2008)
+avgUnemploymentRate2009Code5<-mean(code5$Unemployment_rate_2009)
+avgUnemploymentRate2010Code5<-mean(code5$Unemployment_rate_2010)
+avgUnemploymentRate2011Code5<-mean(code5$Unemployment_rate_2011)
+avgUnemploymentRate2012Code5<-mean(code5$Unemployment_rate_2012)
+avgUnemploymentRate2013Code5<-mean(code5$Unemployment_rate_2013)
+avgUnemploymentRate2014Code5<-mean(code5$Unemployment_rate_2014)
+avgUnemploymentRate2015Code5<-mean(code5$Unemployment_rate_2015)
+avgUnemploymentRate2016Code5<-mean(code5$Unemployment_rate_2016)
+avgUnemploymentRate2017Code5<-mean(code5$Unemployment_rate_2017)
+
+code5_county_avg_unemployment_rate_by_year <-data.frame(
+"Avg_for_counties_in_code5_2007"=c(avgUnemploymentRate2007Code5), "Avg_for_counties_in_code5_2008"=c(avgUnemploymentRate2008Code5), "Avg_for_counties_in_code5_2009"=c(avgUnemploymentRate2009Code5), "Avg_for_counties_in_code5_2010"=c(avgUnemploymentRate2010Code5), "Avg_for_counties_in_code5_2011"=c(avgUnemploymentRate2011Code5), "Avg_for_counties_in_code5_2012"=c(avgUnemploymentRate2012Code5), "Avg_for_counties_in_code5_2013"=c(avgUnemploymentRate2013Code5), "Avg_for_counties_in_code5_2014"=c(avgUnemploymentRate2014Code5), "Avg_for_counties_in_code5_2015"=c(avgUnemploymentRate2015Code5), "Avg_for_counties_in_code5_2016"=c(avgUnemploymentRate2016Code5), "Avg_for_counties_in_code5_2017"=c(avgUnemploymentRate2017Code5))
+
+y5<-c(code5_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code5_2007,
+		 code5_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code5_2008,
+		 code5_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code5_2009,
+		 code5_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code5_2010,
+		 code5_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code5_2011,
+		 code5_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code5_2012,
+		 code5_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code5_2013,
+		 code5_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code5_2014,
+		 code5_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code5_2015,
+		 code5_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code5_2016,
+		 code5_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code5_2017)
+
+plot(x, y5, xlim=c(2007, 2017), ylim=c(0, 20))
+
+#CODE 6
+code6 <-job_data %>%
+				filter(Rural_urban_continuum_code_2013==6)
+
+avgUnemploymentRate2007Code6<-mean(code6$Unemployment_rate_2007)
+avgUnemploymentRate2008Code6<-mean(code6$Unemployment_rate_2008)
+avgUnemploymentRate2009Code6<-mean(code6$Unemployment_rate_2009)
+avgUnemploymentRate2010Code6<-mean(code6$Unemployment_rate_2010)
+avgUnemploymentRate2011Code6<-mean(code6$Unemployment_rate_2011)
+avgUnemploymentRate2012Code6<-mean(code6$Unemployment_rate_2012)
+avgUnemploymentRate2013Code6<-mean(code6$Unemployment_rate_2013)
+avgUnemploymentRate2014Code6<-mean(code6$Unemployment_rate_2014)
+avgUnemploymentRate2015Code6<-mean(code6$Unemployment_rate_2015)
+avgUnemploymentRate2016Code6<-mean(code6$Unemployment_rate_2016)
+avgUnemploymentRate2017Code6<-mean(code6$Unemployment_rate_2017)
+
+code6_county_avg_unemployment_rate_by_year <-data.frame(
+"Avg_for_counties_in_code6_2007"=c(avgUnemploymentRate2007Code6), "Avg_for_counties_in_code6_2008"=c(avgUnemploymentRate2008Code6), "Avg_for_counties_in_code6_2009"=c(avgUnemploymentRate2009Code6), "Avg_for_counties_in_code6_2010"=c(avgUnemploymentRate2010Code6), "Avg_for_counties_in_code6_2011"=c(avgUnemploymentRate2011Code6), "Avg_for_counties_in_code6_2012"=c(avgUnemploymentRate2012Code6), "Avg_for_counties_in_code6_2013"=c(avgUnemploymentRate2013Code6), "Avg_for_counties_in_code6_2014"=c(avgUnemploymentRate2014Code6), "Avg_for_counties_in_code6_2015"=c(avgUnemploymentRate2015Code6), "Avg_for_counties_in_code6_2016"=c(avgUnemploymentRate2016Code6), "Avg_for_counties_in_code6_2017"=c(avgUnemploymentRate2017Code6))
+
+y6<-c(code6_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code6_2007,
+		 code6_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code6_2008,
+		 code6_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code6_2009,
+		 code6_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code6_2010,
+		 code6_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code6_2011,
+		 code6_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code6_2012,
+		 code6_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code6_2013,
+		 code6_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code6_2014,
+		 code6_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code6_2015,
+		 code6_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code6_2016,
+		 code6_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code6_2017)
+
+plot(x, y6, xlim=c(2007, 2017), ylim=c(0, 20))
+
+
+#CODE 7
+code7 <-job_data %>%
+				filter(Rural_urban_continuum_code_2013==7)
+
+avgUnemploymentRate2007Code7<-mean(code7$Unemployment_rate_2007)
+avgUnemploymentRate2008Code7<-mean(code7$Unemployment_rate_2008)
+avgUnemploymentRate2009Code7<-mean(code7$Unemployment_rate_2009)
+avgUnemploymentRate2010Code7<-mean(code7$Unemployment_rate_2010)
+avgUnemploymentRate2011Code7<-mean(code7$Unemployment_rate_2011)
+avgUnemploymentRate2012Code7<-mean(code7$Unemployment_rate_2012)
+avgUnemploymentRate2013Code7<-mean(code7$Unemployment_rate_2013)
+avgUnemploymentRate2014Code7<-mean(code7$Unemployment_rate_2014)
+avgUnemploymentRate2015Code7<-mean(code7$Unemployment_rate_2015)
+avgUnemploymentRate2016Code7<-mean(code7$Unemployment_rate_2016)
+avgUnemploymentRate2017Code7<-mean(code7$Unemployment_rate_2017)
+
+code7_county_avg_unemployment_rate_by_year <-data.frame(
+"Avg_for_counties_in_code7_2007"=c(avgUnemploymentRate2007Code7), "Avg_for_counties_in_code7_2008"=c(avgUnemploymentRate2008Code7), "Avg_for_counties_in_code7_2009"=c(avgUnemploymentRate2009Code7), "Avg_for_counties_in_code7_2010"=c(avgUnemploymentRate2010Code7), "Avg_for_counties_in_code7_2011"=c(avgUnemploymentRate2011Code7), "Avg_for_counties_in_code7_2012"=c(avgUnemploymentRate2012Code7), "Avg_for_counties_in_code7_2013"=c(avgUnemploymentRate2013Code7), "Avg_for_counties_in_code7_2014"=c(avgUnemploymentRate2014Code7), "Avg_for_counties_in_code7_2015"=c(avgUnemploymentRate2015Code7), "Avg_for_counties_in_code7_2016"=c(avgUnemploymentRate2016Code7), "Avg_for_counties_in_code7_2017"=c(avgUnemploymentRate2017Code7))
+
+y7<-c(code7_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code7_2007,
+		 code7_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code7_2008,
+		 code7_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code7_2009,
+		 code7_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code7_2010,
+		 code7_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code7_2011,
+		 code7_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code7_2012,
+		 code7_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code7_2013,
+		 code7_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code7_2014,
+		 code7_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code7_2015,
+		 code7_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code7_2016,
+		 code7_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code7_2017)
+
+plot(x, y7, xlim=c(2007, 2017), ylim=c(0, 20))
+
+#CODE 8
+code8 <-job_data %>%
+				filter(Rural_urban_continuum_code_2013==8)
+
+avgUnemploymentRate2007Code8<-mean(code8$Unemployment_rate_2007)
+avgUnemploymentRate2008Code8<-mean(code8$Unemployment_rate_2008)
+avgUnemploymentRate2009Code8<-mean(code8$Unemployment_rate_2009)
+avgUnemploymentRate2010Code8<-mean(code8$Unemployment_rate_2010)
+avgUnemploymentRate2011Code8<-mean(code8$Unemployment_rate_2011)
+avgUnemploymentRate2012Code8<-mean(code8$Unemployment_rate_2012)
+avgUnemploymentRate2013Code8<-mean(code8$Unemployment_rate_2013)
+avgUnemploymentRate2014Code8<-mean(code8$Unemployment_rate_2014)
+avgUnemploymentRate2015Code8<-mean(code8$Unemployment_rate_2015)
+avgUnemploymentRate2016Code8<-mean(code8$Unemployment_rate_2016)
+avgUnemploymentRate2017Code8<-mean(code8$Unemployment_rate_2017)
+
+code8_county_avg_unemployment_rate_by_year <-data.frame(
+"Avg_for_counties_in_code8_2007"=c(avgUnemploymentRate2007Code8), "Avg_for_counties_in_code8_2008"=c(avgUnemploymentRate2008Code8), "Avg_for_counties_in_code8_2009"=c(avgUnemploymentRate2009Code8), "Avg_for_counties_in_code8_2010"=c(avgUnemploymentRate2010Code8), "Avg_for_counties_in_code8_2011"=c(avgUnemploymentRate2011Code8), "Avg_for_counties_in_code8_2012"=c(avgUnemploymentRate2012Code8), "Avg_for_counties_in_code8_2013"=c(avgUnemploymentRate2013Code8), "Avg_for_counties_in_code8_2014"=c(avgUnemploymentRate2014Code8), "Avg_for_counties_in_code8_2015"=c(avgUnemploymentRate2015Code8), "Avg_for_counties_in_code8_2016"=c(avgUnemploymentRate2016Code8), "Avg_for_counties_in_code8_2017"=c(avgUnemploymentRate2017Code8))
+
+y8<-c(code8_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code8_2007,
+		 code8_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code8_2008,
+		 code8_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code8_2009,
+		 code8_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code8_2010,
+		 code8_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code8_2011,
+		 code8_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code8_2012,
+		 code8_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code8_2013,
+		 code8_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code8_2014,
+		 code8_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code8_2015,
+		 code8_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code8_2016,
+		 code8_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code8_2017)
+
+plot(x, y8, xlim=c(2007, 2017), ylim=c(0, 20))
+
+
+
+#CODE 9
+code9 <-job_data %>%
+				filter(Rural_urban_continuum_code_2013==9)
+
+avgUnemploymentRate2007Code9<-mean(code9$Unemployment_rate_2007)
+avgUnemploymentRate2008Code9<-mean(code9$Unemployment_rate_2008)
+avgUnemploymentRate2009Code9<-mean(code9$Unemployment_rate_2009)
+avgUnemploymentRate2010Code9<-mean(code9$Unemployment_rate_2010)
+avgUnemploymentRate2011Code9<-mean(code9$Unemployment_rate_2011)
+avgUnemploymentRate2012Code9<-mean(code9$Unemployment_rate_2012)
+avgUnemploymentRate2013Code9<-mean(code9$Unemployment_rate_2013)
+avgUnemploymentRate2014Code9<-mean(code9$Unemployment_rate_2014)
+avgUnemploymentRate2015Code9<-mean(code9$Unemployment_rate_2015)
+avgUnemploymentRate2016Code9<-mean(code9$Unemployment_rate_2016)
+avgUnemploymentRate2017Code9<-mean(code9$Unemployment_rate_2017)
+
+#class(avgUnemploymentRate2007Code9)
+
+#new data frame of all the years for all the code3 counties
+code9_county_avg_unemployment_rate_by_year <-data.frame(
+"Avg_for_counties_in_code9_2007"=c(avgUnemploymentRate2007Code9), "Avg_for_counties_in_code9_2008"=c(avgUnemploymentRate2008Code9), "Avg_for_counties_in_code9_2009"=c(avgUnemploymentRate2009Code9), "Avg_for_counties_in_code9_2010"=c(avgUnemploymentRate2010Code9), "Avg_for_counties_in_code9_2011"=c(avgUnemploymentRate2011Code9), "Avg_for_counties_in_code9_2012"=c(avgUnemploymentRate2012Code9), "Avg_for_counties_in_code9_2013"=c(avgUnemploymentRate2013Code9), "Avg_for_counties_in_code9_2014"=c(avgUnemploymentRate2014Code9), "Avg_for_counties_in_code9_2015"=c(avgUnemploymentRate2015Code9), "Avg_for_counties_in_code9_2016"=c(avgUnemploymentRate2016Code9), "Avg_for_counties_in_code9_2017"=c(avgUnemploymentRate2017Code9))
+
+y9<-c(code9_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code9_2007,
+		 code9_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code9_2008,
+		 code9_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code9_2009,
+		 code9_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code9_2010,
+		 code9_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code9_2011,
+		 code9_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code9_2012,
+		 code9_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code9_2013,
+		 code9_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code9_2014,
+		 code9_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code9_2015,
+		 code9_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code9_2016,
+		 code9_county_avg_unemployment_rate_by_year$Avg_for_counties_in_code9_2017)
+
+plot(x, y9, xlim=c(2007, 2017), ylim=c(0, 20))
 
 ```
 
